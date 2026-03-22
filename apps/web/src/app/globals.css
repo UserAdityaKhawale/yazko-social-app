@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: #000000;
+  --background-soft: #09090b;
+  --panel: #18181b;
+  --panel-strong: #111113;
+  --panel-muted: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 94, 0, 0.35);
+  --text: #ffffff;
+  --text-soft: #d4d4d8;
+  --text-muted: #a1a1aa;
+  --accent: #ff5e00;
+  --accent-soft: rgba(255, 94, 0, 0.14);
+  --accent-strong: #ff8a47;
+  --success: #22c55e;
+  --danger: #fb7185;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 94, 0, 0.14), transparent 22%),
+    radial-gradient(circle at 85% 12%, rgba(255, 255, 255, 0.05), transparent 18%),
+    linear-gradient(180deg, #050505 0%, #000000 100%);
+  color: var(--text);
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 94, 0, 0.35) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 94, 0, 0.35);
+  border-radius: 999px;
+}
+
+::selection {
+  background: rgba(255, 94, 0, 0.25);
+  color: #fff7f2;
+}

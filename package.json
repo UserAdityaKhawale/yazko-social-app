@@ -1,0 +1,16 @@
+{
+  "name": "yazko-social-app",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm.cmd run dev --workspace @yazko/web",
+    "dev:server": "npm.cmd run dev --workspace @yazko/server",
+    "build": "npm.cmd run build --workspace @yazko/web && npm.cmd run build --workspace @yazko/server",
+    "lint": "npm.cmd run lint --workspace @yazko/web",
+    "typecheck": "npm.cmd run typecheck --workspace @yazko/web && npm.cmd run typecheck --workspace @yazko/server"
+  }
+}
+
