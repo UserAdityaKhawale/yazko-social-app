@@ -1,6 +1,6 @@
-﻿# Yazko App
+# Yazko App
 
-Yazko is a zero-cost-first social chat MVP focused on a polished demo experience.
+Yazko is a real-time social chat app built with Next.js, Express, Socket.io, and MongoDB.
 
 ## What is implemented
 
@@ -11,7 +11,7 @@ Yazko is a zero-cost-first social chat MVP focused on a polished demo experience
 - Reactions, replies, edit/delete, and media upload wiring
 - Profile mood/status editing
 - Rule-based safety moderation
-- Local demo mode that works without backend, database, or paid services
+- Deployment configuration for Vercel and Render
 
 ## Workspace
 
@@ -19,15 +19,6 @@ Yazko is a zero-cost-first social chat MVP focused on a polished demo experience
 - `apps/server`: Express + Socket.io backend
 
 ## Quick start
-
-### Zero-cost local demo
-
-1. Install dependencies with `npm install`.
-2. Run `npm run dev:demo`.
-3. Open `http://localhost:3000`.
-4. Use `Open Demo` or `Open Demo Mode`.
-
-This path does not require MongoDB, Cloudinary, Google auth, or any paid service.
 
 ### Full local stack
 
@@ -41,12 +32,13 @@ This path does not require MongoDB, Cloudinary, Google auth, or any paid service
 ### Frontend
 
 - `vercel.json` is included for the Next.js app.
-- The zero-cost public-demo option is frontend-only deployment with demo mode.
+- Deploy the web app from `apps/web`.
 
 ### Backend
 
 - `render.yaml` is included for the Express API.
-- Persistent backend deployment still requires MongoDB and env setup.
+- Deploy the API from `apps/server`.
+- A MongoDB connection string and production env values are required.
 
 ## Verification
 
@@ -58,14 +50,12 @@ This path does not require MongoDB, Cloudinary, Google auth, or any paid service
 ## Free-only notes
 
 - Paid AI features were intentionally removed.
-- Demo mode is the recommended zero-cost showcase path.
-- Cloudinary is optional and only needed for real media uploads outside demo mode.
-- Google auth is backend-ready but not required for the demo.
+- Cloudinary is optional and only needed for real media uploads.
+- Google auth is backend-ready but optional for the first public release.
 - Analytics are first-party console/pageview hooks only.
 
 ## Reports and Handoff
 
 - See `docs/PHASE-REPORT.md` for completion status.
-- See `docs/DEMO-RUNBOOK.md` for how to run and present the app.
 - See `docs/RELEASE-CHECKLIST.md` for final release readiness.
 - See `docs/FINAL-HANDOFF.md` for the final MVP handoff summary.
