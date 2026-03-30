@@ -1,6 +1,8 @@
 export type User = {
   id: string;
   username: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
   avatar: string;
   bio: string;
@@ -58,4 +60,3 @@ export type Message = {
   deletedAt?: string;
   createdAt: string;
 };
-

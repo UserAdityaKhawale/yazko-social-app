@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -57,4 +57,51 @@ body {
 ::selection {
   background: rgba(255, 94, 0, 0.25);
   color: #fff7f2;
+}
+
+.auth-tagline {
+  color: #f8f8fb;
+  text-wrap: balance;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  animation: authTaglineFloat 4.8s ease-in-out infinite;
+}
+
+.auth-tagline-accent {
+  background: linear-gradient(135deg, #ffffff 0%, #ffb082 42%, #ff5e00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.auth-tagline-mark {
+  display: inline-block;
+  color: #ffb082;
+  filter: drop-shadow(0 0 14px rgba(255, 94, 0, 0.45));
+  animation: authTaglineSpark 2.2s ease-in-out infinite;
+}
+
+@keyframes authTaglineFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.94;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@keyframes authTaglineSpark {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.78;
+  }
+
+  50% {
+    transform: scale(1.08) rotate(8deg);
+    opacity: 1;
+  }
 }

@@ -1,4 +1,4 @@
-import type { Server as HttpServer } from "http";
+﻿import type { Server as HttpServer } from "http";
 import { Server } from "socket.io";
 import { env } from "./config/env";
 import { verifyToken } from "./lib/auth";
@@ -12,7 +12,7 @@ type TypingPayload = {
 export function createSocketServer(server: HttpServer) {
   const io = new Server(server, {
     cors: {
-      origin: env.clientUrl,
+      origin: env.clientOrigins,
       credentials: true
     }
   });
@@ -63,4 +63,3 @@ export function createSocketServer(server: HttpServer) {
 
   return io;
 }
-

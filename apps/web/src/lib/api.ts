@@ -29,7 +29,7 @@ async function request<T>(path: string, init: RequestInit = {}, token?: string):
 }
 
 export const api = {
-  signup: (body: { username: string; email: string; password: string }) =>
+  signup: (body: { username: string; firstName: string; lastName: string; email: string; password: string }) =>
     request<{ token: string; user: User }>("/auth/signup", {
       method: "POST",
       body: JSON.stringify(body)

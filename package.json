@@ -8,9 +8,12 @@
   "scripts": {
     "dev:web": "npm.cmd run dev --workspace @yazko/web",
     "dev:server": "npm.cmd run dev --workspace @yazko/server",
+    "dev:demo": "npm.cmd run dev --workspace @yazko/web",
+    "start:web": "npm.cmd run start --workspace @yazko/web",
+    "start:server": "npm.cmd run start --workspace @yazko/server",
     "build": "npm.cmd run build --workspace @yazko/web && npm.cmd run build --workspace @yazko/server",
     "lint": "npm.cmd run lint --workspace @yazko/web",
-    "typecheck": "npm.cmd run typecheck --workspace @yazko/web && npm.cmd run typecheck --workspace @yazko/server"
+    "typecheck": "npm.cmd run typecheck --workspace @yazko/web && npm.cmd run typecheck --workspace @yazko/server",
+    "verify": "npm.cmd run typecheck && npm.cmd run build --workspace @yazko/server && npm.cmd run build --workspace @yazko/web"
   }
 }
-

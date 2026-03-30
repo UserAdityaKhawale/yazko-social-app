@@ -6,6 +6,8 @@ export function serializeUser(user: IUserDocument) {
   return {
     id: user.id,
     username: user.username,
+    firstName: user.firstName,
+    lastName: user.lastName,
     email: user.email,
     avatar: user.avatar,
     bio: user.bio,
@@ -48,4 +50,3 @@ export async function serializeMessage(message: IMessageDocument) {
     createdAt: message.createdAt
   };
 }
-

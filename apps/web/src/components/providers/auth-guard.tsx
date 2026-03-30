@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/use-auth-store";
 
-const publicPaths = new Set(["/login", "/signup"]);
+const publicPaths = new Set(["/", "/login", "/signup"]);
 
 export function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -16,11 +16,10 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
       router.replace("/login");
     }
 
-    if (token && publicPaths.has(pathname)) {
+    if (token && (pathname === "/login" || pathname === "/signup")) {
       router.replace("/chat");
     }
   }, [pathname, router, token]);
 
   return <>{children}</>;
 }
-
